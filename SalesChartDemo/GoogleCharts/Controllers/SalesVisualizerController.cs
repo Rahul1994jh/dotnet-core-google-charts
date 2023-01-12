@@ -30,14 +30,15 @@ namespace GoogleCharts.Controllers
         public async Task<IActionResult> Get()
         {
             var chart = (await _salesService.GetAllAsync()).FirstOrDefault();
-            int dataLength = chart.Data.Count();
+            int dataLength = chart.Data.Count()+1;
+
             object[][] dataArray = new object[dataLength][];
 
             dataArray[0] = new object[] { "Task", "Sale per month" };
 
             for (int i = 1; i < dataLength; i++)
             {
-                dataArray[i] = new object[] { chart.Data.ElementAt(i).Month, chart.Data.ElementAt(i).Value };
+                dataArray[i] = new object[] { chart.Data.ElementAt(i-1).Month, chart.Data.ElementAt(i-1).Value };
             }
 
             return Ok(new
