@@ -1,0 +1,186 @@
+{
+    "version": 1.0,
+    "totalCharts": 32,
+    "charts": [
+        {
+            "name": "Pie",
+            "chartType": "PieChart",
+            "data": [
+                [
+                    "Task",
+                    "Sale per month"
+                ],
+                [
+                    "Jan",
+                    1200
+                ],
+                [
+                    "Feb",
+                    500
+                ],
+                [
+                    "March",
+                    922
+                ],
+                [
+                    "Aril",
+                    2000
+                ],
+                [
+                    "May",
+                    700
+                ],
+                [
+                    "June",
+                    920
+                ],
+                [
+                    "July",
+                    300
+                ],
+                [
+                    "September",
+                    1700
+                ],
+                [
+                    "October",
+                    1300
+                ],
+                [
+                    "November",
+                    1400
+                ],
+                [
+                    "December",
+                    2500
+                ]
+            ],
+            "options": {
+                "title": "I am pie",
+                "is3D": true
+            },
+            "width": "100%",
+            "height": "400px"
+        },
+        {
+            "name": "Bar",
+            "chartType": "BarChart",
+            "data": [
+                [
+                    "Task",
+                    "Sale per month"
+                ],
+                [
+                    "Jan",
+                    1200
+                ],
+                [
+                    "Feb",
+                    500
+                ],
+                [
+                    "March",
+                    922
+                ],
+                [
+                    "Aril",
+                    2000
+                ],
+                [
+                    "May",
+                    700
+                ],
+                [
+                    "June",
+                    920
+                ],
+                [
+                    "July",
+                    300
+                ],
+                [
+                    "September",
+                    1700
+                ],
+                [
+                    "October",
+                    1300
+                ],
+                [
+                    "November",
+                    1400
+                ],
+                [
+                    "December",
+                    2500
+                ]
+            ],
+            "options": {
+                "title": "I am a bar"
+            },
+            "width": "100%",
+            "height": "400px"
+        },
+        {
+            "name": "Pie",
+            "chartType": "PieChart",
+            "data": [
+                [
+                    "Task",
+                    "Sale per month"
+                ],
+                [
+                    "Jan",
+                    1200
+                ],
+                [
+                    "Feb",
+                    500
+                ],
+                [
+                    "March",
+                    922
+                ],
+                [
+                    "Aril",
+                    2000
+                ],
+                [
+                    "May",
+                    700
+                ],
+                [
+                    "June",
+                    920
+                ],
+                [
+                    "July",
+                    300
+                ],
+                [
+                    "September",
+                    1700
+                ],
+                [
+                    "October",
+                    1300
+                ],
+                [
+                    "November",
+                    1400
+                ],
+                [
+                    "December",
+                    2500
+                ]
+            ],
+            "options": {
+                "title": "I am a bar",
+                "pieHole": 0.4,
+                "is3D": true
+            },
+            "width": "100%",
+            "height": "400px"
+        }
+    ]
+}
