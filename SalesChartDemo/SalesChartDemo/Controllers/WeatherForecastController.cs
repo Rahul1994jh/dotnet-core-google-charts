@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using SalesChartDemo.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace SalesChartDemo.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -20,6 +22,7 @@ namespace SalesChartDemo.Controllers
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
+           
             _logger = logger;
         }
 

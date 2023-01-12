@@ -1,9 +1,14 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SalesChartDemo.Contracts;
+using SalesChartDemo.Data;
+using SalesChartDemo.Services;
 
 namespace SalesChartDemo
 {
@@ -21,6 +26,12 @@ namespace SalesChartDemo
         {
 
             services.AddControllersWithViews();
+            //databse
+            services.AddDbContext<ApplicationDbContext>(o => o.UseInMemoryDatabase("test_db"));
+
+            services.AddScoped<ISalesService,  SalesService>();
+
+            services.AddAutoMapper(typeof(Startup));
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
