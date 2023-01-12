@@ -1,0 +1,7 @@
+﻿{
+  "id": 1,
+  "name": "Bar",
+  "chartType": "BarChart",
+  "width": "100%",
+  "height": "400px"
+}

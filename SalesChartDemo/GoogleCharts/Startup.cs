@@ -1,7 +1,6 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,10 +9,11 @@ using SalesChartDemo.Contracts;
 using SalesChartDemo.Data;
 using SalesChartDemo.Services;
 
-namespace SalesChartDemo
+namespace GoogleCharts
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -24,20 +24,14 @@ namespace SalesChartDemo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddControllersWithViews();
+            services.AddCors();
+            services.AddControllers();
             //databse
             services.AddDbContext<ApplicationDbContext>(o => o.UseInMemoryDatabase("test_db"));
 
-            services.AddScoped<ISalesService,  SalesService>();
+            services.AddScoped<ISalesService, SalesService>();
 
             services.AddAutoMapper(typeof(Startup));
-
-            // In production, the React files will be served from this directory
-            services.AddSpaStaticFiles(configuration =>
-            {
-                configuration.RootPath = "ClientApp/build";
-            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,31 +41,18 @@ namespace SalesChartDemo
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-            }
-
-            app.UseStaticFiles();
-            app.UseSpaStaticFiles();
 
             app.UseRouting();
 
+            app.UseCors(
+               options => options.WithOrigins("http://localhost:3000").AllowAnyMethod()
+             );
+
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller}/{action=Index}/{id?}");
-            });
-
-            app.UseSpa(spa =>
-            {
-                spa.Options.SourcePath = "ClientApp";
-
-                if (env.IsDevelopment())
-                {
-                    spa.UseReactDevelopmentServer(npmScript: "start");
-                }
+                endpoints.MapControllers();
             });
         }
     }

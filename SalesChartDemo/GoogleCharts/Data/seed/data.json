@@ -1,0 +1,75 @@
+﻿[
+  {
+    "id": 1,
+    "month": "Jan",
+    "value": 1200,
+    "chartId": 1
+  },
+  {
+    "id": 2,
+    "month": "Feb",
+    "value": 500,
+    "chartId": 1
+  },
+  {
+    "id": 3,
+    "month": "March",
+    "value": 922,
+    "chartId": 1
+  },
+  {
+    "id": 4,
+    "month": "Aril",
+    "value": 2000,
+    "chartId": 1
+  },
+  {
+    "id": 5,
+    "month": "May",
+    "value": 700,
+    "chartId": 1
+  },
+  {
+    "id": 6,
+    "month": "June",
+    "value": 920,
+    "chartId": 1
+  },
+  {
+    "id": 7,
+    "month": "July",
+    "value": 300,
+    "chartId": 1
+  },
+  {
+    "id": 8,
+    "month": "August",
+    "value": 300,
+    "chartId": 1
+  },
+  {
+    "id": 9,
+    "month": "September",
+    "value": 1700,
+    "chartId": 1
+  },
+  {
+    "id": 10,
+    "month": "October",
+    "value": 1300,
+    "chartId": 1
+  },
+  {
+    "id": 11,
+    "month": "November",
+    "value": 1400,
+    "ChartId": 1
+  },
+  {
+    "id": 12,
+    "month": "December",
+    "value": 2500,
+    "chartId": 1
+  }
+]
+

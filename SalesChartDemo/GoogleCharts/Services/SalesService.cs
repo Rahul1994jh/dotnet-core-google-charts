@@ -17,9 +17,12 @@ namespace SalesChartDemo.Services
             _applicationDbContext = applicationDbContext;
         }
 
-        public async Task<IEnumerable<Sale>> GetAllAsync()
+        public async Task<IEnumerable<Chart>> GetAllAsync()
         {
-            return await _applicationDbContext.Sales.ToListAsync();
+            return await _applicationDbContext.Charts
+                         .Include(x=> x.Options)
+                         .Include(x => x.Data)
+                         .ToListAsync();
         }
     }
 }

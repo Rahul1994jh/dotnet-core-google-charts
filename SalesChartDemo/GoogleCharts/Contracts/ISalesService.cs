@@ -7,6 +7,6 @@ namespace SalesChartDemo.Contracts
 {
     public interface ISalesService
     {
-        Task<IEnumerable<Sale>> GetAllAsync();
+        Task<IEnumerable<Chart>> GetAllAsync();
     }
 }
